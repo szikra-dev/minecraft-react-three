@@ -1,9 +1,12 @@
+import { Sky } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 
 function App() {
   return (
     <>
-      <Canvas></Canvas>
+      <Canvas>
+        <Sky sunPosition={[100, 100, 20]} />
+      </Canvas>
     </>
   )
 }
