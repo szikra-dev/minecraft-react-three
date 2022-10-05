@@ -2,6 +2,7 @@ import { useFrame, useThree } from '@react-three/fiber'
 import { useSphere } from '@react-three/cannon'
 import { useEffect, useRef } from 'react'
 import { Vector3 } from 'three'
+import { useKeyboard } from '../hooks/useKeyboard'
 
 export const Player = () => {
   const { camera } = useThree()
@@ -10,6 +11,7 @@ export const Player = () => {
     type: 'Dynamic',
     position: [0, 1, 0],
   }))
+  const actions = useKeyboard()
 
   const vel = useRef([0, 0, 0])
   useEffect(() => {
